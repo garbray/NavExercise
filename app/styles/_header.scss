@@ -1,0 +1,90 @@
+.header {
+	background-color: $magenta;
+  font-family: $huge-font;
+  height: 72px;
+  z-index: 100;
+  position: relative;
+  .mobil-icon {
+    display: none;
+  }
+  .logo {
+    background: url("../images/HUGE-white.png") 50% 50% no-repeat;
+    background-size: contain;
+    display: block;
+    left: 24px;
+    height: 24px;
+    position: absolute;
+    top: 24px;
+    width: 60px;
+    &:hover {
+      background: url("../images/HUGE-black.png") 50% 50% no-repeat;
+      background-size: contain;
+    }
+    &.hide {
+      background: url("../images/HUGE-magenta.png") 50% 50% no-repeat;
+      background-size: contain;
+    }
+  }
+  .close-icon, .menu-icon {
+    display: none;
+  }
+  .nav {
+    margin: 0 0 0 132px;
+    padding: 0;
+    .nav-item {
+      color: $white;
+      float: left;
+      font-size: $primary-nav;
+      height: 72px;
+      line-height: 1.5;
+      position: relative;
+      cursor: pointer;
+      .item {
+        padding: 24px 24px 16px;
+        display: inline-block;
+      }
+      &:hover, &.open {
+        background-color: $white;
+        color: $magenta;
+        .item {
+          color: $magenta;
+        }
+      }
+      &.open {
+        .sub-menu {
+          display: block;
+          left: 0;
+          min-width: 100%;
+        }
+      }
+      .sub-menu {
+        background-color: $white;
+        display: none;
+        font-family: $galaxie-font;
+        left: -99999em;
+        padding: 12px 0;
+        position: absolute;
+        top: 72px;
+        white-space: nowrap;
+        z-index: 1;
+        .sub-item {
+          color: $black;
+        }
+        .sub-menu-item {
+          font-size: 16px;
+          padding: 12px 24px;
+          &:hover {
+            background-color: $light-gray;
+            .sub-item {
+              color: $magenta;
+            }
+          }
+        }
+      }
+    }
+  }
+  .copyright {
+    font-size: $body-copyright-mobile;
+    display: none;
+  }
+}

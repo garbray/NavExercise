@@ -1,0 +1,20 @@
+{
+  "name": "NavExercise",
+  "version": "0.0.1",
+  "homepage": "https://github.com/hugeinc/NavExercise",
+  "authors": [
+    "Bryan Garzon Bahamon <darksxd@gmail.com>"
+  ],
+  "description": "nav exercise",
+  "keywords": [
+    "test"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

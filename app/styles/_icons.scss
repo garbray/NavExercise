@@ -1,0 +1,83 @@
+.icon {
+	height: 20px;
+	width: 24px;
+	display: block;
+}
+//svg version base64
+.close-icon {
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuNCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSI3MnB4IiBoZWlnaHQ9IjcycHgiIHZpZXdCb3g9IjAgMCA3MiA3MiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNzIgNzIiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8cG9seWdvbiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9IjM4Ljg1NCwzNS45NzcgNDUuOSwyOC45MjkgNDMuMDcxLDI2LjEgMzUuOTc1LDMzLjE5NiAyOC43NTgsMjYuMjI3IDI1Ljk3OSwyOS4xMDQgMzMuMTQ2LDM2LjAyNSAKCTI2LjEwMSw0My4wNyAyOC45Myw0NS44OTkgMzYuMDI0LDM4LjgwNSA0My4yNDMsNDUuNzc1IDQ2LjAyMSw0Mi44OTggIi8+Cjwvc3ZnPg==) no-repeat center center;
+}
+
+.menu-icon {
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuNCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSI3MnB4IiBoZWlnaHQ9IjcycHgiIHZpZXdCb3g9IjAgMCA3MiA3MiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNzIgNzIiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxyZWN0IHg9IjI0IiB5PSIyNiIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjI0IiBoZWlnaHQ9IjQiLz4KCTxyZWN0IHg9IjI0IiB5PSIzNCIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjI0IiBoZWlnaHQ9IjQiLz4KCTxyZWN0IHg9IjI0IiB5PSI0MiIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjI0IiBoZWlnaHQ9IjQiLz4KPC9nPgo8L3N2Zz4=) no-repeat center center;
+}
+
+//html version
+.mobil-icon {
+	position: absolute;
+	top: 20px;
+	left: 24px;
+	transition: all ease-in 0.5s;
+	.ham {
+		width: 24px;
+		height: 4px;
+	    margin: 8px 0;
+	    background: $white;
+	    transition: all ease 0.2s;
+		&::before, &::after {
+			content: "";
+			position: absolute;
+			top: 0px;
+			width: 24px;
+			height: 4px;
+		    background: $white;
+		}
+		&::after {
+			content: "";
+			top: 16px;
+			position: absolute;
+		}
+	}
+	&.open {
+		left: calc(100% - 48px);
+		transition: all ease-in 0.5s;
+		.ham {
+			background: $magenta;
+			transition: all ease 1s;
+			transition-delay: 0.2s;
+			&::before, &::after {
+				top: 10px;
+				transform: rotate(-45deg);
+				transition-delay: 0.5s;
+			}
+			&::after {
+				transform: rotate(45deg);
+				top: 10px;
+			}
+		}
+	}
+}
+
+.arrow {
+	display: none;
+	float: right;
+	transform: rotate(180deg);
+	transition: transform cubic-bezier(0.22, 0.61, 0.36, 1) 0.8s;
+	&::before {
+		content: "";
+		width: 15px;
+		height: 3px;
+		transform: rotate(45deg);
+		background-color: $magenta;
+		float: right;
+	}
+	&::after {
+		content: "";
+		width: 15px;
+		height: 3px;
+		transform: rotate(-45deg);
+		background-color: $magenta;
+		float: right;
+		margin-right: -6px;
+	}
+}

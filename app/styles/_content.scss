@@ -1,0 +1,26 @@
+.content {
+	.image-bg {
+		background-image: url("../images/background-image.jpg");
+		background-size: cover;
+		height: 650px;
+	}
+	.title {
+		color: $white;
+		float: left;
+		font-family: $huge-font;
+		font-size: $headline;
+		margin: 0;
+		padding: 205px 0px;
+		position: absolute;
+		text-align: center;
+		top: 72px;
+		width: 100%;
+	}
+	.wrap {
+		font-family: $galaxie-font;
+		font-size: $body-copy;
+		margin: 60px auto 0;
+		width: 968px;
+		text-align: justify;
+	}
+}

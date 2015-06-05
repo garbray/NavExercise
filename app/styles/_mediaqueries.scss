@@ -1,0 +1,126 @@
+@media only screen and (max-width: 1040px) {
+	.header {
+		.nav {
+			.nav-item {
+				.item {
+					padding: 24px 15px 16px;
+			  		font-size: 0.9em;
+				}
+				&:last-child {
+					.sub-menu {
+						left: -62px;
+					}
+				}
+			}
+		}
+	}
+	.content {
+		.wrap {
+			width: 100%;
+			padding: 0 24px 10px;
+			margin-top: 0;
+			font-size: $body-copy-mobile;
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.header {
+		height: 60px;
+  		position: relative;
+  		.mobil-icon {
+  			display: block;
+  		}
+		.logo {
+			height: 20px;
+			top: 20px;
+			left: calc(-100% - 75px);
+			transition: left ease-in 0.5s;
+			&.open {
+				left: 20px;
+				transition: left ease-in 0.5s;
+			}
+		}
+		.nav {
+			background-color: white;
+			height: 100vh;
+			left: -100%;
+			margin: 0;
+			padding: 12px 0;
+			position: absolute;
+			top: 60px;
+			transition: all ease-in 0.5s;
+			width: calc(100% - 72px);
+			.nav-item {
+				float: none;
+				background: $white;
+				height: 48px;
+				overflow: hidden;
+				padding: 0;
+				.item {
+					color: #000;
+					padding: 12px 10px 12px 24px;
+					width: 100%;
+					display: inline-block;
+					line-height: 1.1;
+					height: 48px;
+					.arrow {
+				        display: block;
+				        margin: 10px 0;
+				    }
+				    &:hover {
+				    	background-color: $light-gray;
+				    }
+				}
+				.sub-menu {
+					height: 100%;
+					display: block;
+					position: inherit;
+					top: 0;
+				}
+				&:hover {
+					.item {
+						color: $black;
+					}
+				}
+				&.open {
+					height: auto;
+					.item {
+						.arrow {
+							transform: rotate(0deg);
+							transition: transform cubic-bezier(0.22, 0.61, 0.36, 1) 0.8s;
+						}
+					}
+				}
+			}
+		}
+		&.open {
+			.nav {
+				left: 0;
+				transition: all ease-in 0.5s;
+			}
+		}
+		.copyright {
+			display: block;
+		}
+	}
+	.content {
+		.image-bg {
+			height: 240px;
+		}
+		.title {
+			margin: 50px 0;
+			padding: 0 24px;
+			position: inherit;
+			font-size: $headline-mobile;
+			color: $black;
+			text-align: left;
+		}
+		.wrap {
+			width: 100%;
+			padding: 0 24px 10px;
+			margin-top: 0;
+			font-size: $body-copy-mobile;
+		}
+	}
+ }
